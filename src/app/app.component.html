@@ -1,0 +1,14 @@
+<h1>Consumindo PokéAPI</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+    </tr>
+  </thead>
+  <body *ngIf="pokemons$ | async as pokemon">
+    <tr *ngFor="let item of pokemon.results">
+      <td>{{item.name}}</td>
+    </tr>
+  </body>
+</table>
